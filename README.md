@@ -1,5 +1,4 @@
-[![Release](https://jitpack.io/v/mminella/versioned-batch-job.svg)]
-(https://jitpack.io/#mminella/versioned-batch-job)
+[![Release](https://jitpack.io/v/mminella/versioned-batch-job.svg)](https://jitpack.io/#mminella/versioned-batch-job)
 
 # Versioned Batch Job
 This job is used in the testing of the CI/CD functionality provided in Spring Cloud Data Flow.  
