@@ -20,9 +20,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.StepContribution;
@@ -101,13 +98,13 @@ public class BatchConfiguration {
 
 				Map<String, Object> properties = this.getProperties();
 
-				Gson gson = new GsonBuilder().setPrettyPrinting().create();
-				String jsonProperties = gson.toJson(properties);
+//				Gson gson = new GsonBuilder().setPrettyPrinting().create();
+//				String jsonProperties = gson.toJson(properties);
 
 				System.out.println(">> The jar file being executed is = " + name.substring(0, name.length() - 1));
 
 				System.out.println("********** PROPERTIES *************");
-				System.out.println(jsonProperties);
+				System.out.println(properties.toString());
 			}
 
 			System.out.println(">> Sleeping for 3 seconds");
