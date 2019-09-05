@@ -89,7 +89,7 @@ public class BatchConfiguration {
 		@Override
 		public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
 
-			System.out.println(">> THIS IS VERSION ONE OF THE JOB");
+			System.out.println(">> THIS IS VERSION TWO OF THE JOB");
 			if(timeWaited == 0) {
 				Map<String, Object> properties = this.getProperties();
 
