@@ -15,7 +15,6 @@
  */
 package io.spring.versionedbatchjob.configuration;
 
-import java.io.File;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
@@ -90,20 +89,12 @@ public class BatchConfiguration {
 		@Override
 		public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
 
+			System.out.println(">> THIS IS VERSION ONE OF THE JOB");
 			if(timeWaited == 0) {
-				String name = new File(BatchConfiguration.class.getProtectionDomain()
-						.getCodeSource()
-						.getLocation().getPath())
-						.getParentFile()
-						.getParentFile()
-						.getName();
-
 				Map<String, Object> properties = this.getProperties();
 
 //				Gson gson = new GsonBuilder().setPrettyPrinting().create();
 //				String jsonProperties = gson.toJson(properties);
-
-				System.out.println(">> The jar file being executed is = " + name.substring(0, name.length() - 1));
 
 				System.out.println("********** PROPERTIES *************");
 				System.out.println(properties.toString());
